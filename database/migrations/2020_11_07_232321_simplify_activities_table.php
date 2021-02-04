@@ -17,7 +17,7 @@ class SimplifyActivitiesTable extends Migration
         Schema::table('activities', function (Blueprint $table) {
             $table->renameColumn('key', 'type');
             $table->renameColumn('extra', 'detail');
-            $table->dropColumn('book_id');
+            // $table->dropColumn('book_id');
             $table->integer('entity_id')->nullable()->change();
             $table->string('entity_type', 191)->nullable()->change();
         });

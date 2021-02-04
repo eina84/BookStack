@@ -17,10 +17,10 @@ class AddOwnedByFieldToEntities extends Migration
         $tables = ['pages', 'books', 'chapters', 'bookshelves'];
         foreach ($tables as $table) {
             Schema::table($table, function (Blueprint $table) {
-                $table->integer('owned_by')->unsigned()->index();
+                // $table->integer('owned_by')->unsigned()->index();
             });
 
-            DB::table($table)->update(['owned_by' => DB::raw('`created_by`')]);
+            // DB::table($table)->update(['owned_by' => DB::raw('`created_by`')]);
         }
 
         Schema::table('joint_permissions', function (Blueprint $table) {

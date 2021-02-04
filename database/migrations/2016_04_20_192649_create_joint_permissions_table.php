@@ -31,8 +31,8 @@ class CreateJointPermissionsTable extends Migration
         });
 
         Schema::table('roles', function (Blueprint $table) {
-            $table->string('system_name');
-            $table->boolean('hidden')->default(false);
+            // $table->string('system_name');
+            // $table->boolean('hidden')->default(false);
             $table->index('hidden');
             $table->index('system_name');
         });

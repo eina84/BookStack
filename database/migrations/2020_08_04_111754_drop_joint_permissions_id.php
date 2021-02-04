@@ -14,8 +14,8 @@ class DropJointPermissionsId extends Migration
     public function up()
     {
         Schema::table('joint_permissions', function (Blueprint $table) {
-            $table->dropColumn('id');
-            $table->primary(['role_id', 'entity_type', 'entity_id', 'action'], 'joint_primary');
+            // $table->dropColumn('id');
+           //  $table->primary(['role_id', 'entity_type', 'entity_id', 'action'], 'joint_primary');
         });
     }
 

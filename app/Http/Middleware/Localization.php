@@ -57,7 +57,7 @@ class Localization
         $defaultLang = config('app.locale');
         config()->set('app.default_locale', $defaultLang);
 
-        if (user()->isDefault() && config('app.auto_detect_locale')) {
+        if (auth()->user()->isDefault() && config('app.auto_detect_locale')) {
             $locale = $this->autoDetectLocale($request, $defaultLang);
         } else {
             $locale = setting()->getUser(user(), 'language', $defaultLang);

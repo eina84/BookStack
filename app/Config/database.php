@@ -92,6 +92,18 @@ return [
             'strict'    => false,
         ],
 
+        'sqlsrv' => [
+            'driver' => 'sqlsrv',
+            'host' => env('DB_HOST', 'localhost'),
+            'port' => env('DB_PORT', '1433'),
+            'database' => env('DB_DATABASE', 'Trident'),
+            'username' => env('DB_USERNAME', 'trident'),
+            'password' => env('DB_PASSWORD', 'EtA9+pqw'),
+            'charset' => 'utf8',
+            'prefix' => '',
+        ],
+
+
     ],
 
     // Migration Repository Table

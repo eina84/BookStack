@@ -15,7 +15,7 @@ class RemoveHiddenRoles extends Migration
     {
         // Remove the hidden property from roles
         Schema::table('roles', function(Blueprint $table) {
-            $table->dropColumn('hidden');
+            // $table->dropColumn('hidden');
         });
 
         // Add column to mark system users
@@ -27,6 +27,7 @@ class RemoveHiddenRoles extends Migration
         $publicUserId = DB::table('users')->insertGetId([
             'email' => 'guest@example.com',
             'name' => 'Guest',
+            'password' => 'Guest',
             'system_name' => 'public',
             'email_confirmed' => true,
             'created_at' => \Carbon\Carbon::now(),
